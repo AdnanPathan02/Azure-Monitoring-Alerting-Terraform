@@ -115,7 +115,6 @@ Azure-Monitoring-Alerting-Terraform
 │   ├── 03-Monitoring/
 │   ├── 04-Alerts/
 │   ├── 05-Validation/
-│   └── 06-CICD/
 │
 ├── scripts/
 │   └── CPU-Stress-Test.ps1
