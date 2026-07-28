@@ -204,9 +204,10 @@ Before deploying the infrastructure, ensure the following tools and resources ar
 ## Step 1 — Clone Repository
 
 ```bash
-git clone https://github.com/<your-github-username>/Azure-Monitoring-Alerting-Terraform.git
+git clone https://github.com/AdnanPathan02/Azure-Monitoring-Alerting-Terraform.git
 
 cd Azure-Monitoring-Alerting-Terraform
+cd terraform
 ```
 
 ---
@@ -216,7 +217,7 @@ cd Azure-Monitoring-Alerting-Terraform
 Copy the example variables file.
 
 ```bash
-copy terraform.tfvars.example terraform.tfvars
+cp terraform.tfvars.example terraform.tfvars
 ```
 
 Update the following values:
@@ -391,15 +392,26 @@ Verify that the following resources are successfully created:
 
 ---
 
-### Terraform Outputs
+### Terraform State
 
-![Terraform Outputs](screenshots/01-Terraform/06-Terraform-Output.png)
+![Terraform Outputs](screenshots/01-Terraform/06-Terraform-State.png)
 
 ---
 
-### Terraform State
+### Terraform Outputs
 
-![Terraform State](screenshots/01-Terraform/07-Terraform-State.png)
+![Terraform State](screenshots/01-Terraform/07-Terraform-Outputs.png)
+
+---
+### Terraform Configuration Files
+
+![Terraform Files](screenshots/01-Terraform/08-Terraform-Files.png)
+
+---
+
+### Terraform Variables
+
+![Terraform Variables](screenshots/01-Terraform/09-TFVars.png)
 
 ---
 
@@ -417,28 +429,34 @@ Verify that the following resources are successfully created:
 
 ---
 
+## Networking
+
+![Networking](screenshots/02-Azure-Resources/03-Networking.png)
+
+---
+
 ## Log Analytics Workspace
 
-![Log Analytics](screenshots/02-Azure-Resources/03-Log-Analytics.png)
+![Log Analytics](screenshots/02-Azure-Resources/04-Log-Analytics-Overview.png)
 
 ---
 
 ## Data Collection Rule
 
-![DCR](screenshots/02-Azure-Resources/04-Data-Collection-Rule.png)
+![DCR](screenshots/02-Azure-Resources/05-DCR.png)
 
 ---
 
 ## Azure Monitor Agent
 
-![AMA](screenshots/02-Azure-Resources/05-Azure-Monitor-Agent.png)
+![AMA](screenshots/02-Azure-Resources/06-Azure-Monitor-Agent.png)
 
 ---
 
 ## Action Group
 
 
-![Action Group](screenshots/02-Azure-Resources/06-Action-Group.png)
+![Action Group](screenshots/02-Azure-Resources/07-Action-Group.png)
 ---
 
 ---
