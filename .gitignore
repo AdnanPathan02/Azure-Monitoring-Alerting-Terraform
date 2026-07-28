@@ -1,42 +1,29 @@
-# Terraform working directories
+# Terraform working directory
 **/.terraform/*
 
-# Terraform state files
+# Terraform state
 *.tfstate
 *.tfstate.*
-.terraform.tfstate.lock.info
+tfplan
+*.tfplan
 
-# Terraform crash logs
-crash.log
-crash.*.log
-
-# Sensitive Terraform variable files
+# Sensitive files
 terraform.tfvars
 *.auto.tfvars
-*.auto.tfvars.json
 
-# Terraform CLI configuration
-.terraformrc
-terraform.rc
+# Crash logs
+crash.log
+*.log
 
-# Local plan files
-*.tfplan
-tfplan
-plan.out
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
 
-# Environment variable files
-.env
-.env.*
-
-# IDE files
+# VS Code
 .vscode/
-.idea/
 
-# Operating system files
+# OS
 .DS_Store
 Thumbs.db
-
-# Private keys
-*.pem
-*.pfx
-*.key
