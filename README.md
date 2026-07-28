@@ -5,7 +5,6 @@
 ![Terraform](https://img.shields.io/badge/Terraform-IaC-623CE4?style=for-the-badge&logo=terraform)
 ![Azure](https://img.shields.io/badge/Microsoft-Azure-0078D4?style=for-the-badge&logo=microsoftazure)
 ![PowerShell](https://img.shields.io/badge/PowerShell-Automation-5391FE?style=for-the-badge&logo=powershell)
-![GitHub](https://img.shields.io/badge/GitHub-Actions-2088FF?style=for-the-badge&logo=githubactions)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 ---
@@ -96,6 +95,7 @@ Azure-Monitoring-Alerting-Terraform
 │
 ├── .github/
 │   └── workflows/
+│       └── terraform-ci.yml
 │
 ├── architecture/
 │   ├── 01-Final-Architecture.png
@@ -744,99 +744,6 @@ The following validation activities were successfully completed.
 
 ---
 
-# GitHub Actions (CI/CD)
-
-This project includes GitHub Actions workflows to automate Terraform validation, planning, deployment, and infrastructure cleanup.
-
-## Workflow Files
-
-```text
-.github/
-└── workflows/
-    ├── terraform-ci.yml
-    ├── terraform-deploy.yml
-    └── terraform-destroy.yml
-```
-
----
-
-## CI Workflow
-
-The Continuous Integration workflow automatically performs:
-
-- Terraform Format Check
-- Terraform Initialization
-- Terraform Validation
-- Terraform Plan
-
-This ensures every code change is validated before deployment.
-
----
-
-## Deployment Workflow
-
-The deployment workflow performs:
-
-- Azure Login
-- Terraform Init
-- Terraform Plan
-- Terraform Apply
-
-Deployment can be triggered manually using GitHub Actions.
-
----
-
-## Destroy Workflow
-
-The destroy workflow safely removes Azure resources when they are no longer required.
-
-Steps performed:
-
-- Azure Login
-- Terraform Init
-- Terraform Plan -destroy
-- Terraform Destroy
-
----
-
-# CI/CD Screenshots
-
-## GitHub Repository
-
-![Repository](screenshots/06-CICD/01-GitHub-Repository.png)
-
----
-
-## GitHub Secrets
-
-![Secrets](screenshots/06-CICD/02-GitHub-Secrets.png)
-
----
-
-## Workflow Files
-
-![Workflow Files](screenshots/06-CICD/03-Workflow-Files.png)
-
----
-
-## Terraform CI Workflow
-
-![Terraform CI](screenshots/06-CICD/04-Terraform-CI-Success.png)
-
----
-
-## Terraform Deployment Workflow
-
-![Terraform Deploy](screenshots/06-CICD/05-Terraform-Deploy-Success.png)
-
----
-
-## Workflow Summary
-
-![Workflow Summary](screenshots/06-CICD/06-Workflow-Summary.png)
-
----
-
 # Security Best Practices
 
 The following security practices have been implemented throughout the project:
@@ -849,8 +756,7 @@ The following security practices have been implemented throughout the project:
 - Monitoring data collected through Data Collection Rules
 - Alerts configured using Azure Monitor
 - Email notifications delivered through Action Groups
-- Remote Terraform State supported
-- Repository structured for secure collaboration
+
 
 ---
 
@@ -897,8 +803,6 @@ This project demonstrates practical experience with:
 - PowerShell Automation
 - Infrastructure Validation
 - GitHub
-- GitHub Actions
-- CI/CD
 
 ---
 
@@ -916,6 +820,9 @@ Potential enhancements for this project include:
 - Azure Policy compliance monitoring
 - Dashboard automation
 - Teams and Microsoft Teams notifications
+- Complete GitHub Actions CI/CD pipeline
+- Automated Terraform deployment and destroy workflows
+- Azure OIDC-based GitHub authentication
 
 ---
 
@@ -962,7 +869,6 @@ Terraform Documentation
 
 Azure Monitor Documentation
 
-GitHub Actions Documentation
 
 ---
 
