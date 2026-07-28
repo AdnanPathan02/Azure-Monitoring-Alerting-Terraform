@@ -1,0 +1,5 @@
+Perf
+| where ObjectName == "Processor"
+| where CounterName == "% Processor Time"
+| project TimeGenerated, Computer, CounterValue
+| order by TimeGenerated desc

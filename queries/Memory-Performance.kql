@@ -1,0 +1,5 @@
+Perf
+| where ObjectName == "Memory"
+| where CounterName == "Available MBytes"
+| project TimeGenerated, Computer, CounterValue
+| order by TimeGenerated desc
